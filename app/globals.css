@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
   --bg: #06131a;
   --bg-soft: #0e2029;
@@ -12,7 +13,6 @@
 }
 
 * {
-  box-sizing: border-box;
 }
 
 html,
@@ -75,9 +75,65 @@ h3 {
 .join-card {
   position: relative;
   z-index: 1;
+  :root {
+    --bg: #06131a;
+    --bg-soft: #0e2029;
+    --panel: rgba(8, 26, 34, 0.88);
+    --panel-2: rgba(10, 34, 44, 0.92);
+    --line: rgba(141, 205, 184, 0.22);
+    --text: #ebfff8;
+    --muted: #9bc7b8;
+    --accent: #58d6a7;
+    --accent-2: #f5b14e;
+    --danger: #ff7a7a;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    min-height: 100%;
+    font-family: var(--font-body), sans-serif;
+    color: var(--text);
+    background: radial-gradient(circle at 15% 20%, #153744 0%, transparent 35%),
+      radial-gradient(circle at 80% 75%, #1e4a37 0%, transparent 35%),
+      linear-gradient(130deg, var(--bg) 0%, #081920 45%, #061015 100%);
+  }
+
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
   width: min(560px, 100%);
   border: 1px solid var(--line);
   border-radius: 24px;
+    font-family: var(--font-heading), sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+  }
+
+  .app-shell {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+  }
+
+  .bg-shape {
+    position: fixed;
+    border-radius: 999px;
+    filter: blur(50px);
+    opacity: 0.28;
+    z-index: 0;
+  }
+
+  .shape-1 {
   background: linear-gradient(160deg, rgba(7, 29, 38, 0.95), rgba(7, 22, 31, 0.92));
   backdrop-filter: blur(14px);
   padding: 30px;
@@ -395,4 +451,31 @@ h3 {
     border-right: none;
     border-bottom: 1px solid var(--line);
   }
+=======
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+>>>>>>> ee991a1 (Initial commit from Create Next App)
 }
