@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # DevilMaxy Hub
 
 Discord-style chat website for your subscribers and Free Fire guild mates, built with Next.js for Vercel deployment and Supabase for free realtime messaging.
@@ -144,25 +145,55 @@ Open `http://localhost:3000`.
   cp .env.example .env.local
 =======
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+=======
+## Free Fire Guild Chat App
+>>>>>>> c59a53a (Update project files)
 
-## Getting Started
+This is a full-featured chat app for your subscribers and Free Fire guild mates, built with Next.js and Supabase.
 
-First, run the development server:
+### Features
+- User registration/login with Free Fire ID, password, and display name
+- Profile management (display name, avatar, password)
+- Guild/group chat rooms (create/join)
+- Direct messages (DMs)
+- Real-time messaging
+- Message history and search
+- Online status and typing indicators
+- Message reactions (emoji likes)
+- Media sharing (images, videos, files)
+- Moderation tools (delete, ban, mute)
+- Notifications (browser)
+- Mobile responsive design
+- Security: password hashing, RLS policies
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Getting Started
+1. Install dependencies:
+	```bash
+	npm install
+	```
+2. Create a `.env.local` file with your Supabase project URL and anon key:
+	```env
+	NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+	NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+	```
+3. Apply the SQL files in your Supabase SQL Editor:
+	- `supabase_full_schema.sql` (tables)
+	- `supabase_security.sql` (security)
+4. Create a Supabase Storage bucket named `chat-media` (public).
+5. Run the development server:
+	```bash
+	npm run dev
+	```
+6. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Deployment
+Deploy for free on [Vercel](https://vercel.com/) and use Supabase’s free tier.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Notes
+- For best security, enable RLS and use password hashing (see `supabase_security.sql`).
+- You can customize features and UI as needed for your community.
 
+<<<<<<< HEAD
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
@@ -180,3 +211,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 >>>>>>> ee991a1 (Initial commit from Create Next App)
+=======
+---
+Made with ❤️ for Free Fire guilds and subscribers!
+>>>>>>> c59a53a (Update project files)
